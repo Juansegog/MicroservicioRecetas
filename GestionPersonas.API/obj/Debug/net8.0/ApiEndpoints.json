@@ -1,0 +1,137 @@
+[
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.RecetasController",
+    "Method": "GetAllCitas",
+    "RelativePath": "api/Recetas/GetAllRecetas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[GestionRecetas.Application.Comunes.RecetaVM, GestionRecetas.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.RecetasController",
+    "Method": "GetRecetaPaciente",
+    "RelativePath": "api/Recetas/GetRecetaPaciente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pacienteId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestionRecetas.Application.Comunes.RecetaVM",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.RecetasController",
+    "Method": "PatchEstadoReceta",
+    "RelativePath": "api/Recetas/PatchEstadoReceta",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdReceta",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estadoReceta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.RecetasController",
+    "Method": "PatchEstRecePaciente",
+    "RelativePath": "api/Recetas/PatchEstRecePaciente",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "estadoReceta",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.RecetasController",
+    "Method": "PostCrearReceta",
+    "RelativePath": "api/Recetas/PostCrearReceta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cita",
+        "Type": "GestionRecetas.Application.CaracteristicasCita.Commands.ComandoAddCita.ComandoReceta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestionRecetas.Application.Comunes.RecetaVM",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestionRecetas.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestionRecetas.API.WeatherForecast, GestionRecetas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
