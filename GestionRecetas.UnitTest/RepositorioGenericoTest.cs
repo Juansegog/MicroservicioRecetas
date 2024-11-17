@@ -18,7 +18,7 @@ public class RepositorioGenericoTests
     }
 
     [Fact]
-    public async Task AddAsync_ShouldAddEntity()
+    public async Task AddAsync()
     {
         // Arrange
         var receta = Receta.CrearReceta(1, "Diego", 1, "Felipe Lopez", "6543265", "1 Inyeccion", "3 Dias", "No debe consumir lacteos", "Paracetamol", ViaAdministracion.Intramuscular, string.Empty, "Infeccion Respiratoria", DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy")), DateTime.Parse("16/12/2024"));
@@ -34,7 +34,7 @@ public class RepositorioGenericoTests
     }
 
     [Fact]
-    public async Task GetAllAsync_ShouldReturnAllEntities()
+    public async Task GetAllAsync()
     { // Arrange
         var recetas = new List<Receta> {
                                 Receta.CrearReceta(1, "Diego", 1, "Felipe Lopez", "6543265", "1 Inyeccion Diaria", "3 Dias", "No debe consumir lacteos", "Paracetamol", ViaAdministracion.Intramuscular, string.Empty, "Infeccion Respiratoria", DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy")), DateTime.Parse("16/12/2024")),
@@ -48,7 +48,7 @@ public class RepositorioGenericoTests
     }
 
     [Fact]
-    public async Task GetByIdAsync_ShouldReturnEntity_WhenIdExists()
+    public async Task GetByIdAsync()
     {
         // Arrange
         var receta = Receta.CrearReceta(1, "Diego", 1, "Felipe Lopez", "6543265", "1 Inyeccion Diaria", "3 Dias", "No debe consumir lacteos", "Paracetamol", ViaAdministracion.Intramuscular, string.Empty, "Infeccion Respiratoria", DateTime.Parse(DateTime.Now.ToString("dd/MM/yyyy")), DateTime.Parse("16/12/2024"));
@@ -62,7 +62,7 @@ public class RepositorioGenericoTests
     }
 
     [Fact]
-    public async Task GetByIdAsync_ShouldThrowNoHayDatosException_WhenIdDoesNotExist()
+    public async Task GetByIdAsync_DeberiaSacarExcepcionNoHayDatosException_CuandoIdNoExiste()
     {
         // Arrange
         _mockDbContext.Setup(db => db.Set<Receta>().FindAsync(It.IsAny<int>())).ReturnsAsync((Receta)null);

@@ -362,3 +362,4 @@ D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersona
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.API\obj\Debug\net8.0\GestionRecetas.API.pdb
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.API\obj\Debug\net8.0\GestionRecetas.API.genruntimeconfig.cache
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.API\obj\Debug\net8.0\ref\GestionRecetas.API.dll
+D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.API\obj\Debug\net8.0\GestionRecetas.API.sourcelink.json

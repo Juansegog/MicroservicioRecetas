@@ -1,4 +1,5 @@
 ﻿using GestionRecetas.Domain.Enums;
+using GestionRecetas.Domain.ExcepcionesGenerales.DomainExceptions;
 using GestionRecetas.Domain.ValueObjects;
 
 namespace GestionRecetas.Domain.Entities
@@ -29,35 +30,43 @@ namespace GestionRecetas.Domain.Entities
 
         }
 
-        private Receta(int pacienteId, string nombrePaciente, int medico, string nombreMedico, string historiaClinica, string dosis, string duracion, string instrucciones, string medicamento, ViaAdministracion viaAdministracion, string observacionesPlanTratamiento, string diagnostico, DateTime fechaReceta, DateTime fechaVencimiento)
+        public static Receta CrearReceta(int pacienteId, string nombrePaciente, int medico, string nombreMedico
+                                    , string historiaClinica, string dosis, string duracion, string instrucciones
+                                    , string medicamento, ViaAdministracion viaAdministracion, string observacionesPlanTratamiento
+                                    , string diagnostico, DateTime fechaReceta, DateTime fechaVencimiento)
         {
-            PacienteId = pacienteId;
-            NombrePaciente = nombrePaciente;
-            Medico = medico;
-            NombreMedico = nombreMedico;
-            HistoriaClinica = historiaClinica;
-            Dosis = dosis;
-            Duracion = duracion;
-            Instrucciones = instrucciones;
-            Medicamento = medicamento;
-            ViaAdministracion = viaAdministracion;
-            ObservacionesPlanTratamiento = observacionesPlanTratamiento;
-            Diagnostico = diagnostico;
-            FechaReceta = fechaReceta;
-            FechaVencimiento = fechaVencimiento;
+
+
+            return new Receta()
+            {
+                PacienteId = pacienteId,
+                NombrePaciente = nombrePaciente,
+                Medico = medico,
+                NombreMedico = nombreMedico,
+                HistoriaClinica = historiaClinica,
+                Dosis = dosis,
+                Duracion = duracion,
+                Instrucciones = instrucciones,
+                Medicamento = medicamento,
+                ViaAdministracion = viaAdministracion,
+                ObservacionesPlanTratamiento = observacionesPlanTratamiento,
+                Diagnostico = diagnostico,
+                FechaReceta = fechaReceta,
+                FechaVencimiento = fechaVencimiento
+            };
         }
 
-        public static Receta CrearReceta(int PacienteId, string NombrePaciente, int Medico, string NombreMedico
-                                    , string HistoriaClinica, string Dosis, string Duracion, string Instrucciones
-                                    , string Medicamento, ViaAdministracion ViaAdministracion, string ObservacionesPlanTratamiento
-                                    , string Diagnostico, DateTime FechaReceta, DateTime FechaVencimiento)
+        private static void ValidarReceta(string nombrePaciente)
         {
-            return new Receta(PacienteId, NombrePaciente, Medico, NombreMedico
-                                     , HistoriaClinica, Dosis, Duracion, Instrucciones
-                                     , Medicamento, ViaAdministracion, ObservacionesPlanTratamiento
-                                     , Diagnostico, FechaReceta, FechaVencimiento);
+            if (string.IsNullOrEmpty(nombrePaciente))
+            {
+                throw new DomainException("El nombre del paciente no puede ser vacio");
+            }
+            if (nombrePaciente.Length > Globales.NombrePacienteMaxLength)
+            {
+                throw new DomainException($"El nombre del paciente no puede exceder los {Globales.NombrePacienteMaxLength} caracteres");
+            }
         }
-
         public void CambiarEstado(EstadoReceta nuevoEstado)
         {
             if (nuevoEstado == null)

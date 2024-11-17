@@ -32,3 +32,4 @@ D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersona
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.Infraestructura\obj\Debug\net8.0\refint\GestionRecetas.Infraestructura.dll
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.Infraestructura\obj\Debug\net8.0\GestionRecetas.Infraestructura.pdb
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.Infraestructura\obj\Debug\net8.0\ref\GestionRecetas.Infraestructura.dll
+D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionPersonas.Infraestructura\obj\Debug\net8.0\GestionRecetas.Infraestructura.sourcelink.json

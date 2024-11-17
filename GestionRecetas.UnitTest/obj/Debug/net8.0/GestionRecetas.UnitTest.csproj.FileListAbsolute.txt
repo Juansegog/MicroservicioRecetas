@@ -171,3 +171,4 @@ D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionRecetas
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionRecetas.UnitTest\obj\Debug\net8.0\GestionRecetas.UnitTest.pdb
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionRecetas.UnitTest\obj\Debug\net8.0\GestionRecetas.UnitTest.genruntimeconfig.cache
 D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionRecetas.UnitTest\obj\Debug\net8.0\ref\GestionRecetas.UnitTest.dll
+D:\Entrevistas de Trabajo\Entrevista Inetum\ProyectoInetumRecetas\GestionRecetas.UnitTest\obj\Debug\net8.0\GestionRecetas.UnitTest.sourcelink.json

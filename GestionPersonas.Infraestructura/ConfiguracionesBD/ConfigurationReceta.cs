@@ -1,4 +1,5 @@
-﻿using GestionRecetas.Domain.Entities;
+﻿using GestionRecetas.Domain;
+using GestionRecetas.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,6 +12,7 @@ namespace GestionRecetas.Infraestructura.ConfiguracionesBD
             builder.ToTable("Recetas");
             builder.HasKey(x => x.Id);
 
+            builder.Property(x => x.NombrePaciente).IsRequired().HasMaxLength(Globales.NombrePacienteMaxLength);
 
             builder.OwnsOne(l => l.DireccionReclamacion, dir =>
             {
